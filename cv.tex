@@ -13,23 +13,19 @@
 %   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 %   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 %   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-%   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-%   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-%   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-%   THE SOFTWARE.
+%   AUTHORS OR COPYRIGHT FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN
+%   AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+%   CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 %   
 %
 %-----------------------------------------------------------------------------------------------------------------------------------------------%
-
 
 %----------------------------------------------------------------------------------------
 %   DOCUMENT DEFINITION
 %----------------------------------------------------------------------------------------
 
-
 % article class because we want to fully customize the page and not use a cv template
-\documentclass[a4paper,12pt]{article}
-
+\documentclass[a4paper,11pt]{article}
 
 %----------------------------------------------------------------------------------------
 %   PACKAGES
@@ -37,25 +33,20 @@
 \usepackage{url}
 \usepackage{parskip}    
 
-
 %other packages for formatting
 \RequirePackage{color}
 \RequirePackage{graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[scale=0.95]{geometry}
-
+\usepackage[scale=0.96]{geometry}
 
 %tabularx environment
 \usepackage{tabularx}
 
-
 %for lists within experience section
 \usepackage{enumitem}
 
-
 % centered version of 'X' col. type
 \newcolumntype{C}{>{\centering\arraybackslash}X} 
-
 
 %to prevent spillover of tabular into next pages
 \usepackage{supertabular}
@@ -63,32 +54,26 @@
 \newlength{\fullcollw}
 \setlength{\fullcollw}{0.47\textwidth}
 
-
 %custom \section
 \usepackage{titlesec}               
 \usepackage{multicol}
 \usepackage{multirow}
 
-
 %CV Sections inspired by: 
 %http://stefano.italians.nl/archives/26
 \titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{6pt}{6pt}
-
+\titlespacing{\section}{0pt}{8pt}{8pt}
 
 %Setup hyperref package, and colours for links
 \usepackage[unicode, draft=false]{hyperref}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
 
-
 %for social icons
 \usepackage{fontawesome5}
 
-
 %debug page outer frames
 %\usepackage{showframe}
-
 
 % job listing environments
 \newenvironment{jobshort}[2]
@@ -100,55 +85,51 @@
     {
     }
 
-
 \newenvironment{joblong}[2]
     {
     \begin{tabularx}{\linewidth}{@{}l X r@{}}
     \textbf{#1} & \hfill &  #2 \\[2pt]
     \end{tabularx}
     \begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2pt,label=--]
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=1pt,label=--]
     }
     {
     \end{itemize}
     \end{minipage}    
     }
 
-
 %----------------------------------------------------------------------------------------
 %   BEGIN DOCUMENT
 %----------------------------------------------------------------------------------------
 \begin{document}
 
-
 % non-numbered pages
 \pagestyle{empty} 
-
 
 %----------------------------------------------------------------------------------------
 %   TITLE
 %----------------------------------------------------------------------------------------
 
-
 \begin{tabularx}{\linewidth}{@{} C @{}}
 \Large{Hachim ASSOUMANI} \\[4pt]
-\textbf{\normalsize{INGÉNIEUR DEVOPS}} \\[3pt] 
+\textbf{\normalsize{INGÉNIEUR DEVOPS}} \\[2pt]
+Permis B \ $|$ \ Nanterre (92000) \\[3pt]
 \href{mailto:hachim.assoumani@hotmail.com}{\raisebox{-0.05\height}\faEnvelope \ hachim.assoumani@hotmail.com} \ $|$ \ 
-\href{tel:+33750836766}{\raisebox{-0.05\height}\faMobile \ (+33)7.50.83.67.66}  \ $|$ \
+\href{tel:+33750836766}{\raisebox{-0.05\height}\faMobile \ (+33)7.50.83.67.66} \\
 \href{https://www.linkedin.com/in/hachim-assoumani-957168293/}{\raisebox{-0.05\height}\faLinkedin \ linkedin} \ $|$ \
 \href{https://github.com/hachim-DevOps}{\raisebox{-0.05\height}\faGithub \ github} \\
 \end{tabularx}
 
+\vspace{6pt}
 
 %----------------------------------------------------------------------------------------
 %  PROFILE
 %----------------------------------------------------------------------------------------
 
-
-%Profil
 \section{Profil Professionnel}
 Ingénieur DevOps passionné par l'automatisation et l'infrastructure cloud. Je conçois et maintiens des environnements DevOps robustes et scalables, avec une expertise en migration, déploiement cloud, CI/CD, monitoring et sécurité.
 
+\vspace{6pt}
 
 %----------------------------------------------------------------------------------------
 %   SKILLS
@@ -156,69 +137,64 @@ Ingénieur DevOps passionné par l'automatisation et l'infrastructure cloud. Je 
 \section{Compétences Techniques}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
 \textbf{Cloud \& Infrastructure} & Azure, AWS, Windows Server, Linux, Docker, Kubernetes, Helm\\
-\textbf{CI/CD \& IaC} & GitLab CI/CD, Azure DevOps, ArgoCD, Terraform, Ansible\\
-\textbf{Monitoring \& Base de données} & Prometheus, Grafana, ELK Stack, MySQL, PostgreSQL\\
+\textbf{CI/CD \& IaC} & GitLab CI/CD, Azure DevOps, ArgoCD, Terraform\\
+\textbf{Monitoring \& Databases} & Prometheus, Grafana, ELK Stack, MySQL\\
 \textbf{Sécurité} & DevSecOps, OWASP ZAP, Azure Key Vault, SAST, DAST\\
 \textbf{Langages \& Scripts} & Python, Bash, PowerShell, Go\\
 \textbf{Systèmes \& Réseaux} & Linux, Windows Server, Nginx, Network Policies\\
 \end{tabularx}
 
+\vspace{6pt}
 
 %----------------------------------------------------------------------------------------
 %   EXPERIENCE
 %----------------------------------------------------------------------------------------
 
-
-%Experience
 \section{Expérience Professionnelle}
 
-
 \begin{joblong}{Ingénieur DevOps - CITEO, Paris}{2023 - 2025}
-\item Référent value-team Communication et accompagnement projets WordPress
+\item Référent DevOps garant du bon fonctionnement technique et de l’accompagnement sur plusieurs projets WordPress
 \item Migration CDN OVH vers Azure Frontdoor, amélioration performances/sécurité
 \item Migration Azure WebApps vers Container Apps, automatisation Terraform/CI-CD
-\item Solutions monitoring (Elasticsearch, Grafana) et collaboration Azure DevOps
+\item Mise en place de Solutions monitoring (Elasticsearch, Grafana) et collaboration Azure DevOps
 \end{joblong}
 
+\vspace{3pt}
 
 \begin{joblong}{Responsable Informatique - AXIANS, Palaiseau}{2021 - 2023}
 \item Pilotage projets d'optimisation d'infrastructure
-\item Gestion équipe IT et amélioration sécurité opérationnelle
-\item Mise en œuvre politiques et procédures informatiques
+\item Gestion du parc informatique
+\item Helpdesk
 \end{joblong}
 
+\vspace{6pt}
 
 %----------------------------------------------------------------------------------------
 %   PROJECTS
 %----------------------------------------------------------------------------------------
   
-%Projects
 \section{Projets Académiques}
 
-
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Déploiement OpenEMR sur Azure} & \hfill  \\
-\multicolumn{2}{@{}X@{}}{Architecture Hub \& Spoke Azure/Terraform, pipeline CI/CD GitLab, monitoring Prometheus/Grafana, GitOps ArgoCD, conteneurisation Docker/Kubernetes (AKS).}  \\
+\textbf{Déploiement OpenEMR sur Azure} & \hfill \\[1pt]
+\multicolumn{2}{@{}X@{}}{Conception d’une architecture sécurisée Hub \& Spoke sur Azure avec Terraform, pipeline CI/CD GitLab, monitoring Prometheus/Grafana, GitOps ArgoCD, conteneurisation Docker/Kubernetes (AKS).} \\
 \end{tabularx}
 
-
-\vspace{4pt}
-
+\vspace{3pt}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{CLI d’Authentification Golang} & \hfill  \\
-\multicolumn{2}{@{}X@{}}{Interface ligne de commande en Go pour intégration de solutions d’authentification modernes, implémentation de la gestion utilisateurs et permissions via API REST (Cobra/Pocketbase).}  \\
+\textbf{CLI d'Authentification Golang} & \hfill \\[1pt]
+\multicolumn{2}{@{}X@{}}{Interface ligne de commande en Go pour intégration de solutions d'authentification modernes, implémentation de la gestion utilisateurs et permissions via API REST (Cobra/Pocketbase).} \\
 \end{tabularx}
 
-
-\vspace{4pt}
-
+\vspace{3pt}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Plateforme E-commerce WordPress AWS} & \hfill  \\
-\multicolumn{2}{@{}X@{}}{Architecture scalable AWS (VPC multi-AZ, ECS Fargate, RDS MySQL, ALB). Automatisation déploiement, haute disponibilité, sécurisation infrastructure.}  \\
+\textbf{Plateforme E-commerce WordPress AWS} & \hfill \\[1pt]
+\multicolumn{2}{@{}X@{}}{Architecture scalable AWS (VPC multi-AZ, ECS Fargate, RDS MySQL, ALB). Automatisation déploiement, haute disponibilité, sécurisation infrastructure.} \\
 \end{tabularx}
 
+\vspace{6pt}
 
 %----------------------------------------------------------------------------------------
 %   EDUCATION
@@ -226,8 +202,11 @@ Ingénieur DevOps passionné par l'automatisation et l'infrastructure cloud. Je 
 \section{Formation}
 \begin{tabularx}{\linewidth}{@{}l X@{}} 
 2023 - 2025 & Master DevOps, Infrastructure \& Cloud - \textbf{Sup de Vinci} \\
+2022 - 2023 & Bachelor Système, Réseau \& Cloud - \textbf{Sup de Vinci} \\
+2020 - 2022 & BTS Services Informatiques aux Organisations (option SISR) - \textbf{H3 Campus} \\
 \end{tabularx}
 
+\vspace{6pt}
 
 %----------------------------------------------------------------------------------------
 %   LANGUAGES & INTERESTS
@@ -237,7 +216,5 @@ Ingénieur DevOps passionné par l'automatisation et l'infrastructure cloud. Je 
 \textbf{Langues} & Français (langue maternelle), Anglais (professionnel - B2)\\
 \textbf{Centres d'Intérêt} & Intelligence Artificielle, Culture asiatique, Football, Voyages\\
 \end{tabularx}
-
-
 
 \end{document}
