@@ -25,7 +25,7 @@
 %----------------------------------------------------------------------------------------
 
 % article class because we want to fully customize the page and not use a cv template
-\documentclass[a4paper,11pt]{article}
+\documentclass[a4paper,10pt]{article}
 
 %----------------------------------------------------------------------------------------
 %   PACKAGES
@@ -37,7 +37,7 @@
 \RequirePackage{color}
 \RequirePackage{graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[scale=0.96]{geometry}
+\usepackage[scale=0.98]{geometry}
 
 %tabularx environment
 \usepackage{tabularx}
@@ -62,7 +62,7 @@
 %CV Sections inspired by: 
 %http://stefano.italians.nl/archives/26
 \titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{8pt}{8pt}
+\titlespacing{\section}{0pt}{8pt}{5pt}
 
 %Setup hyperref package, and colours for links
 \usepackage[unicode, draft=false]{hyperref}
@@ -91,7 +91,7 @@
     \textbf{#1} & \hfill &  #2 \\[2pt]
     \end{tabularx}
     \begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=1pt,label=--]
+    \begin{itemize}[after=\strut, leftmargin=1em, itemsep=3pt,label=--]
     }
     {
     \end{itemize}
@@ -111,39 +111,39 @@
 %----------------------------------------------------------------------------------------
 
 \begin{tabularx}{\linewidth}{@{} C @{}}
-\Large{Hachim ASSOUMANI} \\[4pt]
-\textbf{\normalsize{INGÉNIEUR CLOUD/DEVOPS}} \\[2pt]
-Permis B \ $|$ \ Nanterre (92000) \\[3pt]
+\Large{Hachim ASSOUMANI} \\[2pt]
+\textbf{\normalsize{INGÉNIEUR CLOUD/DEVOPS}} \\[1pt]
+Permis B \ $|$ \ Nanterre (92000) \\[1pt]
 \href{mailto:hachim.assoumani@hotmail.com}{\raisebox{-0.05\height}\faEnvelope \ hachim.assoumani@hotmail.com} \ $|$ \ 
 \href{tel:+33750836766}{\raisebox{-0.05\height}\faMobile \ (+33)7.50.83.67.66} \
 \href{https://www.linkedin.com/in/hachim-assoumani-957168293/}{\raisebox{-0.05\height}\faLinkedin \ linkedin} \ $|$ \
 \href{https://hachimmm.github.io/portfolio-hachim/}{\raisebox{-0.05\height}\faGlobe \ portfolio} \
 \end{tabularx}
 
-\vspace{6pt}
+\vspace{3pt}
 
 %----------------------------------------------------------------------------------------
 %  PROFILE
 %----------------------------------------------------------------------------------------
 
 \section{Profil Professionnel}
-Ingénieur Cloud/DevOps passionné par l'automatisation, l'infrastructure cloud et l'optimisation FinOps, avec une forte spécialisation sur Azure. Je conçois et maintiens des environnements DevOps robustes et scalables, déploiement cloud, CI/CD, monitoring et sécurité.
+Ingénieur Cloud/DevOps avec 3 ans d'expérience, spécialisé Azure et axé FinOps. Expert en automatisation, optimisation des coûts cloud, CI/CD, gouvernance, supervision et sécurité.
 
-\vspace{6pt}
+\vspace{3pt}
 
 %----------------------------------------------------------------------------------------
 %   SKILLS
 %----------------------------------------------------------------------------------------
 \section{Compétences Techniques}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
-\textbf{Cloud \& Infrastructure} & Azure, AWS, Windows Server, Linux, Docker, Kubernetes, Helm\\
-\textbf{CI/CD \& IaC} & GitLab CI/CD, Azure DevOps, ArgoCD, Terraform\\
-\textbf{Monitoring \& Databases} & Prometheus, Grafana, ELK Stack, MySQL\\
-\textbf{Sécurité} & DevSecOps, OWASP ZAP, Azure Key Vault, SAST, DAST\\
-\textbf{Langages \& Scripts} & Bash, PowerShell, Go\\
+\textbf{Cloud \& Infrastructure} & Azure, AWS, Linux, Docker, Kubernetes, Helm\\
+\textbf{CI/CD \& IaC} & GitHub, Azure DevOps, ArgoCD, Terraform\\
+\textbf{Monitoring \& Databases} & Prometheus, Grafana, ELK Stack, SQL\\
+\textbf{Sécurité} & DevSecOps, Réseaux, Renovate, Key Vault, Trivy\\
+\textbf{Langages \& Scripts} & Bash, PowerShell, Python\\
 \end{tabularx}
 
-\vspace{6pt}
+\vspace{3pt}
 
 %----------------------------------------------------------------------------------------
 %   EXPERIENCE
@@ -151,50 +151,47 @@ Ingénieur Cloud/DevOps passionné par l'automatisation, l'infrastructure cloud 
 
 \section{Expérience Professionnelle}
 
-\begin{joblong}{Ingénieur DevOps - CITEO, Paris}{2023 - 2025}
-\item Référent DevOps garant du bon fonctionnement technique et de l’accompagnement sur plusieurs projets WordPress
-\item Architecture et déploiement d'environnements Azure Container Apps multi-conteneurs via Terraform : provisioning automatisé (ACR, Key Vault, Managed Identity, volumes), dockerisation avec pattern sidecar, orchestration CI/CD
-\item Migration CDN OVH vers Azure Frontdoor, amélioration performances/sécurité
-\item Migration de 10+ applications Azure WebApps vers Container Apps, automatisation Terraform/CI-CD et FinOps
-\item Mise en place de Solutions monitoring et de logging (Elasticsearch, Grafana)
+\begin{joblong}{Ingénieur DevOps - CITEO (prestataire NEXTON), Paris}{Mars 2026 - Aujourd'hui}
+\item Création de workflows réutilisables et d'actions composites GitHub Actions, limitant la duplication et simplifiant la maintenance CI/CD
+\item Pilotage de la migration des dépôts .NET (front-end/API) d'une value team d'Azure DevOps vers GitHub :
+\begin{itemize}[nosep, leftmargin=1em, itemsep=0pt, label=\textbullet]
+\item Mise en place d'un Reusable Workflow faisant appel à des actions Composites (application, environnement, image, registre, variables, secrets), adaptables sans duplication
+\item Gouvernance des dépôts (branches protégées, groupes d'accès, règles), renforçant sécurité et cohérence
+\item Documentation de migration, accélérant la prise en main et l'autonomie de l'équipe DevOps
+\end{itemize}
+\item Automatisation des sauvegardes et restaurations des dépôts d'organisation vers Azure Blob Storage, renforçant leur protection et disponibilité :
+\begin{itemize}[nosep, leftmargin=1em, itemsep=0pt, label=\textbullet]
+\item Sauvegardes incrémentales avec suivi d'état, évitant les doublons et réduisant les coûts de stockage
+\item Restauration sécurisée, validée en test, avec nettoyage optionnel, réduisant les erreurs et ressources temporaires
+\item Accès sécurisés via GitHub App, OIDC et Azure Identity ; opérations automatisées et supervision centralisée
+\end{itemize}
+\item Centralisation de la gestion des dépendances Terraform avec Renovate, réduisant la maintenance manuelle et fiabilisant les environnements :
+\begin{itemize}[nosep, leftmargin=1em, itemsep=0pt, label=\textbullet]
+\item Configuration partagée pour automatiser les mises à jour des providers et modules sur plusieurs dépôts
+\item Automatisation des PR et approbations via GitHub Actions, avec traitement spécifique des mises à jour majeures et critiques
+\item Gouvernance renforcée : ancienneté minimale des versions, automerge encadré, labels dédiés et contrôle des breaking changes
+\item Réduction du travail manuel de maintenance des dépendances et amélioration de la fiabilité des environnements d’infrastructure
+\end{itemize}
+\end{joblong}
+
+
+\vspace{2pt}
+
+\begin{joblong}{Ingénieur DevOps (Alternance) - CITEO, Paris}{2023 - 2025}
+\item Référent DevOps de plusieurs projets WordPress : maintien en conditions opérationnelles et accompagnement technique
+\item Déploiement d'environnements multi-conteneurs Azure Container Apps avec Terraform (ACR, Key Vault, Managed Identity, volumes, sidecar), industrialisant le provisioning et la CI/CD
+\item Migration de 10+ Azure Web Apps vers Container Apps, automatisant l'infrastructure et optimisant les coûts (FinOps)
+\item Mise en place du monitoring et du logging (Elasticsearch, Grafana, UptimeRobot, Prometheus), améliorant visibilité et réactivité
+\end{joblong}
+
+\vspace{2pt}
+
+\begin{joblong}{Responsable Informatique (Alternance) - AXIANS, Palaiseau}{2021 - 2023}
+\item Pilotage de projets d'optimisation d'infrastructure et gestion du parc informatique
+\item Support helpdesk aux utilisateurs
 \end{joblong}
 
 \vspace{3pt}
-
-\begin{joblong}{Responsable Informatique - AXIANS, Palaiseau}{2021 - 2023}
-\item Pilotage projets d'optimisation d'infrastructure
-\item Gestion du parc informatique
-\item Helpdesk
-\end{joblong}
-
-\vspace{6pt}
-
-%----------------------------------------------------------------------------------------
-%   PROJECTS
-%----------------------------------------------------------------------------------------
-  
-\section{Projets Personnels}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Déploiement OpenEMR sur Azure} & \hfill \\[1pt]
-\multicolumn{2}{@{}X@{}}{Conception d’une architecture sécurisée Hub \& Spoke sur Azure avec Terraform, pipeline CI/CD GitLab, monitoring Prometheus/Grafana, GitOps ArgoCD, conteneurisation Docker/Kubernetes (AKS).} \\
-\end{tabularx}
-
-\vspace{3pt}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{CLI d'Authentification Golang} & \hfill \\[1pt]
-\multicolumn{2}{@{}X@{}}{Interface ligne de commande en Go pour intégration de solutions d'authentification modernes, implémentation de la gestion utilisateurs et permissions via API REST (Cobra/Pocketbase).} \\
-\end{tabularx}
-
-\vspace{3pt}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Microservices Python AWS EKS} & \hfill \\[1pt]
-\multicolumn{2}{@{}X@{}}{Application de conversion vidéo vers audio en architecture microservices sur AWS EKS. Déploiement automatisé avec Helm, gestion de bases de données PostgreSQL et MongoDB, orchestration RabbitMQ, sécurité et haute disponibilité, CI/CD GitHub Actions.} \\
-\end{tabularx}
-
-\vspace{6pt}
 
 %----------------------------------------------------------------------------------------
 %   EDUCATION
@@ -206,7 +203,7 @@ Ingénieur Cloud/DevOps passionné par l'automatisation, l'infrastructure cloud 
 2020 - 2022 & BTS Services Informatiques aux Organisations (option SISR) - \textbf{H3 Campus} \\
 \end{tabularx}
 
-\vspace{6pt}
+\vspace{3pt}
 
 %----------------------------------------------------------------------------------------
 %   LANGUAGES & INTERESTS
@@ -214,7 +211,7 @@ Ingénieur Cloud/DevOps passionné par l'automatisation, l'infrastructure cloud 
 \section{Langues \& Centres d'Intérêt}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
 \textbf{Langues} & Français (langue maternelle), Anglais (professionnel - B2)\\
-\textbf{Centres d'Intérêt} & Intelligence Artificielle, Culture asiatique, Football, Voyages\\
+\textbf{Centres d'Intérêt} & Intelligence Artificielle, Culture asiatique, Volley-ball, Voyages\\
 \end{tabularx}
 
 \end{document}

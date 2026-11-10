@@ -1,0 +1,202 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%   The MIT License (MIT)
+%
+%   Copyright (c) 2021 Jitin Nair
+%
+%   Permission is hereby granted, free of charge, to any person obtaining a copy
+%   of this software and associated documentation files (the "Software"), to deal
+%   in the Software without restriction, including without limitation the rights
+%   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%   copies of the Software, and to permit persons to whom the Software is
+%   furnished to do so, subject to the following conditions:
+%   
+%   The above copyright notice and this permission notice shall be included in all
+%   copies or substantial portions of the Software.
+%   
+%   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+%   SOFTWARE.
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+%----------------------------------------------------------------------------------------
+%   DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper,10pt]{article}
+
+%----------------------------------------------------------------------------------------
+%   PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip}
+
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.98]{geometry}
+
+\usepackage{tabularx}
+\usepackage{enumitem}
+
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{multirow}
+
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{8pt}{5pt}
+
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+
+\usepackage{fontawesome5}
+
+\newenvironment{jobshort}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[2pt]
+    \end{tabularx}
+    }
+    {
+    }
+
+\newenvironment{joblong}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[2pt]
+    \end{tabularx}
+    \begin{minipage}[t]{\linewidth}
+    \begin{itemize}[after=\strut, leftmargin=1em, itemsep=3pt,label=--]
+    }
+    {
+    \end{itemize}
+    \end{minipage}
+    }
+
+%----------------------------------------------------------------------------------------
+%   BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+\pagestyle{empty}
+
+%----------------------------------------------------------------------------------------
+%   TITLE
+%----------------------------------------------------------------------------------------
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Large{Hachim ASSOUMANI} \\[2pt]
+\textbf{\normalsize{CLOUD / DEVOPS ENGINEER}} \\[1pt]
+Category B driving licence \ $|$ \ Nanterre (92000), France \\[1pt]
+\href{mailto:hachim.assoumani@hotmail.com}{\raisebox{-0.05\height}\faEnvelope \ hachim.assoumani@hotmail.com} \ $|$ \
+\href{tel:+33750836766}{\raisebox{-0.05\height}\faMobile \ (+33)7.50.83.67.66} \
+\href{https://www.linkedin.com/in/hachim-assoumani-957168293/}{\raisebox{-0.05\height}\faLinkedin \ LinkedIn} \ $|$ \
+\href{https://hachimmm.github.io/portfolio-hachim/}{\raisebox{-0.05\height}\faGlobe \ Portfolio} \
+\end{tabularx}
+
+\vspace{3pt}
+
+%----------------------------------------------------------------------------------------
+%   PROFILE
+%----------------------------------------------------------------------------------------
+
+\section{Professional Profile}
+Cloud/DevOps Engineer with 3 years of experience, specialising in Azure and focused on FinOps. Skilled in automation, cloud cost optimisation, CI/CD, governance, monitoring and security.
+
+\vspace{3pt}
+
+%----------------------------------------------------------------------------------------
+%   SKILLS
+%----------------------------------------------------------------------------------------
+\section{Technical Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+\textbf{Cloud \& Infrastructure} & Azure, AWS, Linux, Docker, Kubernetes, Helm\\
+\textbf{CI/CD \& IaC} & GitHub, Azure DevOps, Argo CD, Terraform\\
+\textbf{Monitoring \& Databases} & Prometheus, Grafana, ELK Stack, SQL\\
+\textbf{Security} & DevSecOps, Networking, Renovate, Key Vault, Trivy\\
+\textbf{Languages \& Scripting} & Bash, PowerShell, Python\\
+\end{tabularx}
+
+\vspace{3pt}
+
+%----------------------------------------------------------------------------------------
+%   EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Professional Experience}
+
+\begin{joblong}{DevOps Engineer - CITEO (consultant via NEXTON), Paris}{March 2026 - Present}
+\item Developed reusable GitHub Actions workflows and composite actions, reducing duplication and simplifying CI/CD maintenance
+\item Led the migration of a value team's .NET repositories (front end/API) from Azure DevOps to GitHub:
+\begin{itemize}[nosep, leftmargin=1em, itemsep=0pt, label=\textbullet]
+\item Built a reusable workflow using composite actions, configurable by application, environment, image, registry, variables and secrets
+\item Established repository governance (branch protection, access groups and rules), improving security and consistency
+\item Documented the migration, accelerating onboarding and increasing the DevOps team's autonomy
+\end{itemize}
+\item Automated organisation-wide repository backups and restores to Azure Blob Storage, improving code protection and availability:
+\begin{itemize}[nosep, leftmargin=1em, itemsep=0pt, label=\textbullet]
+\item Implemented incremental backups with state tracking to prevent duplicates and reduce storage costs
+\item Introduced secure, test-validated restoration with optional cleanup, reducing errors and temporary resource accumulation
+\item Secured access with GitHub App, OIDC and Azure Identity, enabling automated operations and centralised monitoring
+\end{itemize}
+\item Centralised Terraform dependency management with Renovate, reducing manual maintenance and improving infrastructure reliability:
+\begin{itemize}[nosep, leftmargin=1em, itemsep=0pt, label=\textbullet]
+\item Shared configuration to automate provider and module updates across multiple repositories
+\item Automated pull request and approval workflows with GitHub Actions, with tailored handling for major and critical updates
+\item Strengthened governance with minimum release age, controlled automerge, dedicated labels and breaking-change checks
+\item Reduced manual dependency maintenance and improved the reliability of infrastructure environments
+\end{itemize}
+\end{joblong}
+
+\vspace{2pt}
+
+\begin{joblong}{DevOps Engineer (Apprenticeship) - CITEO, Paris}{2023 - 2025}
+\item DevOps point of contact for multiple WordPress projects, ensuring operational continuity and providing technical support
+\item Deployed multi-container Azure Container Apps environments with Terraform (ACR, Key Vault, Managed Identity, volumes and sidecars), industrialising provisioning and CI/CD
+\item Migrated 10+ Azure Web Apps to Container Apps, automating infrastructure and optimising costs (FinOps)
+\item Implemented application and infrastructure monitoring and logging (Elasticsearch, Grafana, UptimeRobot, Prometheus), improving visibility and responsiveness
+\end{joblong}
+
+\vspace{2pt}
+
+\begin{joblong}{IT Manager (Apprenticeship) - AXIANS, Palaiseau}{2021 - 2023}
+\item Led infrastructure optimisation projects and managed the IT estate
+\item Provided helpdesk support to users
+\end{joblong}
+
+\vspace{3pt}
+
+%----------------------------------------------------------------------------------------
+%   EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+2023 - 2025 & Master's degree in DevOps, Infrastructure \& Cloud - \textbf{Sup de Vinci} \\
+2022 - 2023 & Bachelor's degree in Systems, Networks \& Cloud - \textbf{Sup de Vinci} \\
+2020 - 2022 & Higher National Diploma in IT Services for Organisations (SISR specialisation) - \textbf{H3 Campus} \\
+\end{tabularx}
+
+\vspace{3pt}
+
+%----------------------------------------------------------------------------------------
+%   LANGUAGES & INTERESTS
+%----------------------------------------------------------------------------------------
+\section{Languages \& Interests}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+\textbf{Languages} & French (native), English (professional - B2)\\
+\textbf{Interests} & Artificial intelligence, Asian culture, Volleyball, Travel\\
+\end{tabularx}
+
+\end{document}
